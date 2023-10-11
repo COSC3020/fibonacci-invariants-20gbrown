@@ -27,3 +27,7 @@ about it at the start of each recursive call.
 Describe your reasoning and the conclusion you've come to. Your reasoning is the
 most important part. You do not need to prove that the invariant is correct. Add
 your answer to this markdown file.
+
+# Answer
+
+I think a good invariant would be that at the begining of each recursive call, the array 'resultArr' contains the Fibonacci sequence for the first'n' Fibonacci numbers, where 'n' is the input to the current recursive call. The reasoning for this would be the base cases and the recursive cases. When n is 0 or 1 the function returns [0] or [0,1], the two base cases show where the invariant holds true. When n is greater than or equal to 1, a recursive call is used to compute the Fibonacci sequence for n-1. After that is appeneded to the array, we can see the invariant holds true because resultArr still contains the first n numbers. 
