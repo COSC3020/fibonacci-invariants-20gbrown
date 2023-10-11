@@ -1,19 +1,15 @@
 //Gage Brown 
 
-function fib(n, arr = {}) {
-    if ( n in arr) {
-        return arr[n];
-    }
-
+function fib(n) {
     if (n === 0) {
-        return 0;
-    }
+      return [0];
+    } 
     else if (n === 1) {
-        return 1;
-    }
+      return [0, 1];
+    } 
     else {
-        const result = fib(n - 1, arr) + fib(n - 2, arr);//recursive call 
-        arr[n] = result;
-        return result;
+      const resultArr = fib(n - 1);
+      resultArr.push(resultArr[resultArr.length - 1] + resultArr[resultArr.length - 2]);
+      return resultArr;
     }
-}
+  }
